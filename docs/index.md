@@ -1,4 +1,6 @@
-# Chào mừng đến với trang Tài liệu của `DUCKY FW` ! #
+# Ducky Docs #
+
+*Chào mừng đến với trang Tài liệu của `DUCKY FW` !*
 
 **Dưới đây là 1 vài thứ để giúp bạn bắt đầu làm quen nhanh hơn:**
 
