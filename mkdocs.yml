@@ -1,0 +1,5 @@
+site_name: Ducky Documentation
+pages:
+    - Index: index.md
+    - About: about.md
+theme: readthedocs
