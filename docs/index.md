@@ -1,17 +1,7 @@
-# Welcome to MkDocs
+# Chào mừng đến với trang Tài liệu của `DUCKY FW` ! #
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+**Dưới đây là 1 vài thứ để giúp bạn bắt đầu làm quen nhanh hơn:**
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+- Link 1
+- Link 2
+- Link 3
