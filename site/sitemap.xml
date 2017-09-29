@@ -4,17 +4,25 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-09-26</lastmod>
+     <lastmod>2017-09-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
 
     
+        
     <url>
-     <loc>/about/</loc>
-     <lastmod>2017-09-26</lastmod>
+     <loc>/begin/coding-style/</loc>
+     <lastmod>2017-09-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/begin/ducky-uri/</loc>
+     <lastmod>2017-09-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

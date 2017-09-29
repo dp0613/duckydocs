@@ -1,5 +1,15 @@
 site_name: Ducky Documentation
 pages:
-    - Index: index.md
-    - About: about.md
+    - Trang chủ: index.md
+    - Bắt đầu:
+        - Các quy ước để làm việc với Ducky: begin/coding-style.md
+        - Tìm hiểu về URI trong Ducky: begin/ducky-uri.md
+        - Cấu trúc thư mục: begin/folder-structure.md
+    - Class:
+        - System:
+            - Lớp View: class/system/view.md
+            - Lớp Route: class/system/route.md
+            - Lớp Debug: class/system/debug.md
+            - Lớp Config: class/system/config.md
 theme: readthedocs
+site_favicon: favicon.ico
