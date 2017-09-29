@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-09-28</lastmod>
+     <lastmod>2017-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,35 @@
         
     <url>
      <loc>/begin/coding-style/</loc>
-     <lastmod>2017-09-28</lastmod>
+     <lastmod>2017-09-29</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/begin/ducky-uri/</loc>
-     <lastmod>2017-09-28</lastmod>
+     <lastmod>2017-09-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/begin/folder-structure/</loc>
+     <lastmod>2017-09-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/begin/data-flow/</loc>
+     <lastmod>2017-09-29</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         

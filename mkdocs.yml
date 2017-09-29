@@ -5,6 +5,7 @@ pages:
         - Các quy ước để làm việc với Ducky: begin/coding-style.md
         - Tìm hiểu về URI trong Ducky: begin/ducky-uri.md
         - Cấu trúc thư mục: begin/folder-structure.md
+        - Luồng dữ liệu: begin/data-flow.md
     - Class:
         - System:
             - Lớp View: class/system/view.md

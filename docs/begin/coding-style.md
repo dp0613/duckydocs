@@ -18,18 +18,24 @@ Tất cả các **tệp thông thường** nếu có tên từ 2 từ trở lên
 
 **SAI:**
 
-    my-class.php  
-    my_class.php  
-    My_class.php
-    
-    mynormalfile.php  
-    MyNormalFile.php
+```php
+my-class.php  
+my_class.php  
+My_class.php
+
+mynormalfile.php  
+MyNormalFile.php
+```
 
 **ĐÚNG:**
 
-    MyClass.php  
-    
-    my-normal-file.php
+```php
+MyClass.php  
+```
+
+```php
+my-normal-file.php
+```
 
 **Chú ý:** 
 
@@ -37,12 +43,12 @@ Tất cả các **tệp thông thường** nếu có tên từ 2 từ trở lên
 1. Tên tệp chứa `class` phải là tên `class`, ví dụ tệp có tên `MyClass.class.php` thì chứa `class` tên `MyClass`.
 2. Các tệp dùng trong các thư mục sau sẽ có phần mở rộng như sau:
 
-	- **core**: `*.class.php`
-	- **controllers**: `*.controller.php`
-	- **models**: `*.model.php`
-	- **libraries**: `*.lib.php`
-	- **config**: `*.conf.php`
-	- **languages**: `*.language.php`
+  - **core**: `*.class.php`
+  - **controllers**: `*.controller.php`
+  - **models**: `*.model.php`
+  - **libraries**: `*.lib.php`
+  - **config**: `*.conf.php`
+  - **languages**: `*.language.php`
 
 Ví dụ:
 
@@ -70,7 +76,7 @@ Ví dụ:
 
     myFunc();  //Hàm thông thường
     _myPrivateFunc(); //Hàm nội bộ
-    
+
 
 
 ## Đặt tên biến
@@ -83,7 +89,7 @@ Ví dụ:
 
     $myVar; //Biến thông thường
     $_myPrivateVar; //Biến nội bộ
-	$myArray[my_key]; //Tên biến mảng và khóa
+    $myArray[my_key]; //Tên biến mảng và khóa
 
 
 
@@ -162,12 +168,12 @@ Mục đích: Để code dễ đọc hơn.
 Khi ghi chú dòng đơn, phải viết hoa đầu dòng, dòng ghi chú phải cách khối code phía trên ra 1 dòng.
 
 Ví dụ 1:
-	
+​	
 	if()
 	{
 		//Code phía trên
 	}
-
+	
 	// Biến toàn cục $session
 	$session = $_SESSION['key'];
 
@@ -227,7 +233,7 @@ Ví dụ:
     $bar = FALSE;
     function foo($bar = NULL)
 
-    
+
 ##Toán tử logic
 
 Toán tử logic gồm `||` hoặc `OR`, `&&` hoặc `AND`, `!` hoặc `NOT`.
@@ -261,10 +267,10 @@ Ví dụ:
 
 Một số hàm của PHP sẽ trả về `false` nếu thất bại, nhưng đa số sẽ trả về "" (rỗng) hoặc `0`. Điều này sẽ dễ khiến cho kết quả so sánh với `FALSE` bị sai, 
 ví dụ:
-	
+​	
 	//Hàm strpos sẽ trả về 0 nếu như chuỗi 'foo' nằm ở đầu của $str.
 	// Cho nên nếu so sánh như hàng dưới đây sẽ ra kết quả TRUE
-
+	
 	if (strpos($str, 'foo') == FALSE) //Return TRUE (vì FALSE = 0)
 
 Cho nên khi so sánh với `FALSE` hoặc `TRUE` phải sử dụng dấu `===` thay vì `==`.
@@ -284,26 +290,26 @@ Ví dụ:
 
 	function build_string($str = "")
 	{
-        if ($str == "") //LoL! Nếu $str được truyền vào là 0 hoặc FALSE thì sao
-        {
-
-        }
+	    if ($str == "") //LoL! Nếu $str được truyền vào là 0 hoặc FALSE thì sao
+	    {
+	
+	    }
 	}
 
 **ĐÚNG:**
 
 	function build_string($str = "")
 	{
-        if ($str === "")
-        {
-
-        }
+	    if ($str === "")
+	    {
+	
+	    }
 	}
 
 Về ép kiểu (typecasting), khi ép, `NULL` và `FALSE` sẽ thành chuỗi rỗng, số 0 và các số khác sẽ trở thành số tương ứng, riêng `TRUE` sẽ trở thành chuỗi '1'.
 
 Ví dụ:
-	
+​	
 	$str = (string)$str;
 
 
@@ -368,7 +374,7 @@ Ví dụ:
     catch() {
     // ...
     }
- 
+
 **CÓ VĂN HÓA:**
 
     function foo($bar)
@@ -416,7 +422,7 @@ Khi truyền tham số vào một hàm, tuyệt đối không để thừa kho�
 **SAI:** 
 
 	print_r( $arr );
-	
+
 	$name = $arr[ 'name' ];
 
 **ĐÚNG:**
@@ -507,7 +513,6 @@ Ví dụ:
 								AND baz != 'zab' 
 								ORDER BY foobaz 
 								LIMIT 5, 100");
-
 
 ----------
 
