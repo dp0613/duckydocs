@@ -6,11 +6,15 @@ pages:
         - Tìm hiểu về URI trong Ducky: begin/ducky-uri.md
         - Cấu trúc thư mục: begin/folder-structure.md
         - Luồng dữ liệu: begin/data-flow.md
-    - Class:
-        - System:
+    - Lớp:
+        - Lớp hệ thống:
             - Lớp View: class/system/view.md
             - Lớp Route: class/system/route.md
             - Lớp Debug: class/system/debug.md
             - Lớp Config: class/system/config.md
+    - Hướng dẫn:
+        - Mở rộng shape:
+        - Tạo template:
+        - Thêm ngôn ngữ:
 theme: readthedocs
 site_favicon: favicon.ico

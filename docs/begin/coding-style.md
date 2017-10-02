@@ -1,7 +1,7 @@
 # Các quy ước để làm việc với Ducky
 
-- **Cấp độ:** Cơ bản
-- **Bắt buộc:** Rất cao
+- **Cấp độ:** Cơ bản (cấp độ 1/3)
+- **Bắt buộc:** Rất cao (cấp độ 5/5)
 
 ----------
 
@@ -70,18 +70,20 @@ Ví dụ:
 
 **Tên hàm:**
 
-Đặt tên theo nguyên tắc chữ cái đầu tiên viết thường, các chữ cái khác theo nguyên tắc "lạc đà", **không** dùng dấu gạch ngang (`-`). Riêng các hàm nội bộ (`private`, `protected`) phải dùng dấu gạch dưới (`_`) làm tiền tố.
+Đặt tên theo nguyên tắc chữ cái đầu tiên viết thường, các chữ cái khác theo nguyên tắc "lạc đà", **không** dùng dấu gạch ngang (`-`). Riêng các hàm chứa các từ khóa (`private`, `protected`, `static`) phải dùng dấu gạch dưới (`_`) làm tiền tố.
 
 Ví dụ:
 
     myFunc();  //Hàm thông thường
-    _myPrivateFunc(); //Hàm nội bộ
+    _myPrivateFunc(); //Hàm chứa từ khóa
 
 
 
 ## Đặt tên biến
 
 Tên biến đặt tương tự như tên hàm.
+
+***Tên biến phải rõ ràng, dễ nhớ và dễ tìm kiếm.***
 
 Riêng tên khóa (`key`) của mảng, phải viết in thường toàn bộ và dùng dấu gạch dưới (`_`) để phân cách từ.
 
@@ -331,9 +333,11 @@ PHP framework chạy theo mô hình MVC thường có Template Engine. Cho nên,
 Tốt nhất là nên xóa bỏ hết tất cả các chỗ dư thừa không cần thiết.
 
 
+
 ## Mỗi tệp chỉ chứa duy nhất 1 `class`
 
 Tiêu đề đã nói rõ ràng rồi, mỗi tệp chỉ chứa 1 lớp. Và mỗi hàm chỉ thực thi 1 công việc duy nhất. Đây chính là tiêu chuẩn cao cấp nhất của "clean code".
+
 
 
 ## Thụt lề
@@ -517,3 +521,5 @@ Ví dụ:
 ----------
 
 Ngày viết: 27/09/2017
+
+Sửa lần cuối vào: 01/10/2017

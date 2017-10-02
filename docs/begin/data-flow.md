@@ -36,8 +36,7 @@ Chính vì vậy, trên hình, `App` được xem là trung tâm xử lý.
 <?php 
   
   // index.php
-  $app = new App();
-  $app -> run($_SERVER['REQUEST_URI']); //Gọi hàm run và truyền URI vào
+  $app = new App($_SERVER['REQUEST_URI']);
 ?>
 ```
 
@@ -87,7 +86,7 @@ Sau khi phân tích xong URI, `App` sẽ dùng segment `controller` trong URI đ
 
 ## `controllerFunc()` gọi `Model` và  `View`
 
-Việc gọi hàm này sẽ trả về nội dung của `view`. Tuy nhiên để trả về được nội dung đó, hàm này sẽ tiến hành gọi đến `Model` tương ứng với segment `model`. `Model` này sẽ thao tác với cơ sở dữ liệu. Sau đó, nhờ sự hỗ trợ của Template Engine (`Shape`), nội dung trả về sẽ được ghép vào khuôn HTML.
+Hàm này sẽ tiến hành gọi đến `Model` tương ứng với segment `model`. `Model` này sẽ thao tác với cơ sở dữ liệu. Sau đó, nhờ sự hỗ trợ của Template Engine (`Shape`), nội dung trả về sẽ được ghép vào khuôn HTML.
 
 ```php
 <?php 
@@ -105,17 +104,17 @@ Việc gọi hàm này sẽ trả về nội dung của `view`. Tuy nhiên để
       $router -> parse($uri);
 			
       //Lấy nội dung tương ứng với request
+      $shape = $router -> _getShape();
       $controller = $router -> _getController();
       $controllerFunc = $router -> _getControllerFunc();
       $controllerObj = new $controller();
       
-      //Gọi hàm nằm trong controller, trả về $contents
-      $contents = $controllerObj -> $controllerFunc(); 
+      //Gọi hàm nằm trong controller, hàm này sẽ assign nội dung của view vào lớp View
+      $controllerObj -> $controllerFunc(); 
 			
       //Load view
       $view = new View();
-      $shape = $router -> _getShape();
-      $shapeHtml = $view -> load($shape, $contents); //Lấy content ghép vào khuôn HTML
+      $html = $view -> render($shape, $controller, $controllerFunc);
     }
   }
 ?>
@@ -127,14 +126,57 @@ Việc gọi hàm này sẽ trả về nội dung của `view`. Tuy nhiên để
 
 Trước khi trả về nội dung cuối cùng, Ducky sẽ chạy lớp `Language` để dịch sang ngôn ngữ tương ứng với segment `language` của URI.
 
+```php
+<?php 
+  
+  // App.class.php
+  class App
+  {
+     
+  	// Hàm run
+    public function run($uri)
+    {
+      
+      //Khởi tạo lớp Route & phân tích URI
+      $router = new Route();
+      $router -> parse($uri);
+			
+      //Lấy nội dung tương ứng với request
+      $shape = $router -> _getShape();
+      $controller = $router -> _getController();
+      $controllerFunc = $router -> _getControllerFunc();
+      $controllerObj = new $controller();
+      
+      //Gọi hàm nằm trong controller, hàm này sẽ assign nội dung của view vào lớp View
+      $controllerObj -> $controllerFunc(); 
+			
+      //Load view
+      $view = new View();
+      $html = $view -> render($shape, $controller, $controllerFunc);
+      
+      //Gán html vào lớp Language
+      $language -> setHtml($html);
+      
+      //In html ra trình duyệt
+      $language -> show();
+      
+    }
+  }
+?>
+```
+
+
+
 
 
 ## Tối ưu
 
-Sau khi dịch hoàn tất, ở lớp cuối cùng, Ducky sẽ minify tệp `html` trả về. Tệp này cũng được `cache` (nếu cần) ở công đoạn này.
+Sau khi dịch hoàn tất, ở công đoạn cuối cùng, Ducky sẽ minify tệp `html` trả về. Tệp này cũng được `cache` (nếu cần) ở công đoạn này.
 
 
 
 ----------
 
 Viết ngày: 29/09/2017
+
+Chỉnh sửa lần cuối vào: 01/10/2017
