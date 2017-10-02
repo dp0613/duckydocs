@@ -12,9 +12,5 @@ pages:
             - Lớp Route: class/system/route.md
             - Lớp Debug: class/system/debug.md
             - Lớp Config: class/system/config.md
-    - Hướng dẫn:
-        - Mở rộng shape:
-        - Tạo template:
-        - Thêm ngôn ngữ:
 theme: readthedocs
 site_favicon: favicon.ico
